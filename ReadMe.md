@@ -6,7 +6,7 @@
 	* GroupId is your unique organizational name (can be used reverse domain name such as com.mycompany)*
 	
 2. add basic dependencies, properties, parent, build phrase to the pom.xml file.  
-``
+```
 <parent>
 	<groupId>org.springframework.boot</groupId>
 	<artifactId>spring-boot-starter-parent</artifactId>
@@ -32,7 +32,7 @@
 		</plugin>
 	</plugins>
 </build>
-``
+```
 		
 - The <parent> tag tells Maven to inherit the properties of spring-boot-starter-parent, such as port number, configs, etc. All these are provided by Spring.
 - The <dependencies> tag contains all the project dependencies. For now, we only have one dependency, spring-boot-starter-web. In a complete application, there could be more, e.g. MySQL, socket, JSON library, etc.
@@ -44,7 +44,7 @@
 - add SpringApplication.run(<Mainclass.class>, args) function inside the Main function.
 - add @SpringBootApplication annotaion to Main class
 
-``
+```
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -55,7 +55,7 @@ public class MainApplicationClass {
 		SpringApplication.run(MainApplicationClass.class, args);
 	}
 }
-``
+```
 		
 5. Run the application. Go to `localhost:8080` and it will give you an error page, because we don’t have a controller to handle our HTTP requests.
 		
